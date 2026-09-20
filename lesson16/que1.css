@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.header {
+    height: 55px;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background-color: white;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+
+    width: 180px;
+}
+
+.hamburger-menu {
+    width: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.youtube-logo {
+    width: 90px;
+}
+
+.middle-section {
+    display: flex;
+    align-items: center;
+
+    flex: 1;
+    max-width: 500px;
+
+    margin-left: 40px;
+    margin-right: 35px;
+}
+
+.search-box {
+    height: 36px;
+
+    flex: 1;
+
+    border: 1px solid #ccc;
+
+    padding-left: 12px;
+
+    font-size: 16px;
+}
+
+.search-button {
+    height: 40px;
+    width: 60px;
+
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+}
+
+.search-button img {
+    width: 24px;
+}
+
+.voice-button {
+    border: none;
+
+    background-color: #f8f8f8;
+
+    border-radius: 50%;
+
+    width: 40px;
+    height: 40px;
+
+    margin-left: 10px;
+}
+
+.voice-button img {
+    width: 24px;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+
+    width: 200px;
+
+    justify-content: space-between;
+
+    margin-right: 20px;
+}
+
+.header-icon {
+    width: 24px;
+}
+
+.current-user-picture {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+}
+
+
+/* Tooltip */
+
+.tooltip-container {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tooltip {
+    position: absolute;
+
+    background-color: gray;
+    color: white;
+
+    padding: 6px 8px;
+
+    border-radius: 2px;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+    bottom: -35px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.tooltip-container:hover .tooltip {
+    opacity: 1;
+}
+
+
+/* Videos */
+
+main {
+    margin-top: 80px;
+    padding: 20px;
+}
+
+.video-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    column-gap: 16px;
+}
+
+.thumbnail {
+    width: 100%;
+}
+
+.video-title {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.video-author,
+.video-stats {
+    font-size: 12px;
+    color: gray;
+}

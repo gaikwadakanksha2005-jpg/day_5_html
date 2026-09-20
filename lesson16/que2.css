@@ -1,0 +1,8 @@
+.video-title-link {
+    text-decoration: none;
+    color: black;
+}
+
+.video-title-link:hover {
+    text-decoration: underline;
+}

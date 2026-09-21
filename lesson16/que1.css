@@ -3,6 +3,9 @@ body {
     font-family: Arial;
 }
 
+
+/* HEADER */
+
 .header {
     height: 55px;
 
@@ -13,6 +16,7 @@ body {
     align-items: center;
 
     position: fixed;
+
     top: 0;
     left: 0;
     right: 0;
@@ -20,7 +24,10 @@ body {
     background-color: white;
 
     border-bottom: 1px solid #ddd;
+
+    z-index: 100;
 }
+
 
 .left-section {
     display: flex;
@@ -29,26 +36,33 @@ body {
     width: 180px;
 }
 
+
 .hamburger-menu {
-    width: 24px;
+    font-size: 24px;
+
     margin-left: 24px;
     margin-right: 24px;
 }
 
+
 .youtube-logo {
-    width: 90px;
+    font-size: 20px;
+    font-weight: bold;
 }
+
 
 .middle-section {
     display: flex;
     align-items: center;
 
     flex: 1;
+
     max-width: 500px;
 
     margin-left: 40px;
     margin-right: 35px;
 }
+
 
 .search-box {
     height: 36px;
@@ -62,17 +76,18 @@ body {
     font-size: 16px;
 }
 
+
 .search-button {
     height: 40px;
     width: 60px;
 
     border: 1px solid #ccc;
+
     background-color: #f8f8f8;
+
+    cursor: pointer;
 }
 
-.search-button img {
-    width: 24px;
-}
 
 .voice-button {
     border: none;
@@ -85,11 +100,10 @@ body {
     height: 40px;
 
     margin-left: 10px;
+
+    cursor: pointer;
 }
 
-.voice-button img {
-    width: 24px;
-}
 
 .right-section {
     display: flex;
@@ -102,9 +116,11 @@ body {
     margin-right: 20px;
 }
 
+
 .header-icon {
-    width: 24px;
+    font-size: 20px;
 }
+
 
 .current-user-picture {
     width: 32px;
@@ -114,20 +130,23 @@ body {
 }
 
 
-/* Tooltip */
+/* TOOLTIP */
 
 .tooltip-container {
     position: relative;
 
     display: flex;
+
     justify-content: center;
     align-items: center;
 }
+
 
 .tooltip {
     position: absolute;
 
     background-color: gray;
+
     color: white;
 
     padding: 6px 8px;
@@ -145,17 +164,20 @@ body {
     pointer-events: none;
 }
 
+
 .tooltip-container:hover .tooltip {
     opacity: 1;
 }
 
 
-/* Videos */
+/* VIDEOS */
 
 main {
     margin-top: 80px;
+
     padding: 20px;
 }
+
 
 .video-grid {
     display: grid;
@@ -165,17 +187,84 @@ main {
     column-gap: 16px;
 }
 
+
 .thumbnail {
     width: 100%;
+
+    display: block;
 }
 
+
+.thumbnail-row {
+    position: relative;
+}
+
+
+.video-time {
+    position: absolute;
+
+    bottom: 8px;
+    right: 5px;
+
+    background-color: black;
+
+    color: white;
+
+    padding: 4px;
+
+    font-size: 12px;
+}
+
+
+.video-info-grid {
+    display: grid;
+
+    grid-template-columns: 50px 1fr;
+
+    margin-top: 10px;
+}
+
+
+.channel-picture {
+    width: 40px;
+}
+
+
+.profile-picture {
+    width: 40px;
+    height: 40px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+.video-title-link {
+    text-decoration: none;
+
+    color: black;
+}
+
+
+.video-title-link:hover {
+    text-decoration: underline;
+}
+
+
 .video-title {
+    margin-top: 0;
+    margin-bottom: 8px;
+
     font-size: 14px;
+
     line-height: 20px;
 }
+
 
 .video-author,
 .video-stats {
     font-size: 12px;
+
     color: gray;
 }

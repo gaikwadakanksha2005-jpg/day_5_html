@@ -1,0 +1,291 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    padding-top: 55px;
+    padding-left: 72px;
+
+    font-family: Roboto, Arial, sans-serif;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    height: 55px;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background-color: white;
+
+    border-bottom: 1px solid rgb(220, 220, 220);
+
+    z-index: 100;
+}
+
+
+.left-section {
+    display: flex;
+
+    align-items: center;
+}
+
+
+.hamburger {
+    font-size: 24px;
+
+    margin-left: 20px;
+    margin-right: 25px;
+}
+
+
+.youtube-logo {
+    color: red;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+
+.middle-section {
+    display: flex;
+
+    width: 500px;
+}
+
+
+.search-box {
+    flex: 1;
+
+    height: 38px;
+
+    border: 1px solid rgb(180, 180, 180);
+
+    padding-left: 15px;
+
+    font-size: 16px;
+}
+
+
+.search-button {
+    width: 60px;
+
+    border: 1px solid rgb(180, 180, 180);
+
+    background-color: rgb(245, 245, 245);
+}
+
+
+.right-section {
+    display: flex;
+
+    gap: 20px;
+
+    margin-right: 20px;
+
+    font-size: 20px;
+}
+
+
+/* =========================
+   SIDEBAR
+   1200px OR BELOW
+========================= */
+
+.sidebar {
+    position: fixed;
+
+    left: 0;
+    bottom: 0;
+    top: 55px;
+
+    background-color: white;
+
+    width: 72px;
+
+    z-index: 200;
+
+    padding-top: 5px;
+
+    border-right: 1px solid rgb(235, 235, 235);
+}
+
+
+.sidebar-link {
+    height: 74px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
+    cursor: pointer;
+}
+
+
+.sidebar-link:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+
+.sidebar-icon {
+    font-size: 24px;
+
+    margin-bottom: 4px;
+}
+
+
+.sidebar-name {
+    font-size: 10px;
+}
+
+
+/* =========================
+   VIDEO GRID
+========================= */
+
+.video-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    column-gap: 16px;
+
+    row-gap: 35px;
+
+    padding: 25px;
+}
+
+
+.thumbnail-row {
+    position: relative;
+}
+
+
+.thumbnail {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.video-time {
+    position: absolute;
+
+    right: 5px;
+    bottom: 8px;
+
+    background-color: black;
+
+    color: white;
+
+    font-size: 12px;
+
+    padding: 4px;
+}
+
+
+.video-title {
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    line-height: 20px;
+
+    font-weight: 500;
+}
+
+
+.video-author,
+.video-stats {
+    margin-top: 0;
+
+    font-size: 12px;
+
+    color: rgb(96, 96, 96);
+}
+
+
+/* =========================
+   WIDE SCREEN
+   1200.1px AND ABOVE
+========================= */
+
+@media (min-width: 1200.1px) {
+
+    body {
+        margin-left: 168px;
+    }
+
+
+    .sidebar {
+        width: 240px;
+
+        padding-top: 13px;
+    }
+
+
+    .sidebar-link {
+        display: flex;
+
+        align-items: center;
+
+        flex-direction: row;
+
+        justify-content: flex-start;
+
+        cursor: pointer;
+
+        padding: 8px 24px;
+
+        height: auto;
+    }
+
+
+    .sidebar-link:hover {
+        background-color: rgb(235, 235, 235);
+    }
+
+
+    .sidebar-icon {
+        height: 24px;
+
+        width: 24px;
+
+        margin-right: 24px;
+
+        margin-bottom: 0;
+
+        font-size: 24px;
+    }
+
+
+    .sidebar-name {
+        font-size: 14px;
+    }
+
+}
